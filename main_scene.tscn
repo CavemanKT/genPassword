@@ -1,0 +1,47 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Main.gd" type="Script" id=1]
+
+[node name="Control" type="Control"]
+margin_right = 1015.0
+margin_bottom = 601.0
+script = ExtResource( 1 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+margin_left = -25.0
+margin_top = -18.0
+margin_right = 1042.0
+margin_bottom = 608.0
+color = Color( 0, 0, 0, 1 )
+
+[node name="Length" type="LineEdit" parent="."]
+margin_left = 137.0
+margin_top = 348.0
+margin_right = 405.0
+margin_bottom = 406.0
+placeholder_text = "Length"
+
+[node name="Amount" type="LineEdit" parent="."]
+margin_left = 611.0
+margin_top = 334.0
+margin_right = 890.0
+margin_bottom = 392.0
+placeholder_text = "Amount"
+
+[node name="GenerateButton" type="Button" parent="."]
+margin_left = 469.0
+margin_top = 487.0
+margin_right = 611.0
+margin_bottom = 551.0
+text = "Generate"
+
+[node name="Passwords" type="RichTextLabel" parent="."]
+margin_left = 255.0
+margin_top = 44.0
+margin_right = 780.0
+margin_bottom = 284.0
+focus_mode = 2
+scroll_following = true
+selection_enabled = true
+
+[connection signal="pressed" from="GenerateButton" to="." method="_on_GenerateButton_pressed"]
